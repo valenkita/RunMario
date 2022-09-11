@@ -1,0 +1,82 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.game-board {
+    width: 80%;
+    height:500px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Positioning and aligning the pipe */
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    /* linear keeps the same speed in the animation */
+    animation: pipe-animation 2s infinite linear;
+}
+
+/* Positioning and aligning mario */
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+
+/* Animations */
+
+/* pipe */
+@keyframes pipe-animation {
+    /* right -80 so the pipe will enter into my box, if I put 0 the pipe appears in the 
+    the right side bottom. */
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+/* Mario */ 
+/* This animation has 3 parts start, middle and end, when starts mario is at the bottom
+so is 0, the middle (when he jumps) the bottom is 180, and the end it is 0 as well as
+the jump is finished */
+@keyframes jump {
+
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+
+
+}
+
