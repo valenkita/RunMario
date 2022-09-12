@@ -5,18 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here"/>
+    <link href="http://fonts.cdnfonts.com/css/super-mario-bros-alphabet" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     
     <title>Run Mario</title>
 </head>
 
 <body>
-
     <div class="game-board">
+        
+        <!-- Div to contain the area with timer, lives and score -->
+        <div id="controls-info-container">
+            <button id="start-button">Play!</button>
+            <button id="info-button">How to play</button>
+            <br>
+            <div id = "play-info">
+              <div class="text-color1 play-info-inner" aria-label="Number of seconds left for current turn" role="timer">
+                Time left: <span id="time-left-info">0</span>
+              </div>
+              <div class="text-color2 play-info-inner" aria-label="Number of turns left" role="status">
+                Turns left: <span id="turns-left-info">0</span>  
+              </div>   
+              <div class="text-color5 play-info-inner" aria-label="Current score" role="status">
+                Score: <span id="score-info">0</span>
+              </div>
+            </div>
+          </div>
+        <img src="./assets/images/ground.png" class="ground" alt="image of grass">
         <img src="./assets/images/clouds.png" class="clouds" alt="image of a cloud">
         <img src="./assets/images/mario.gif" class="mario" alt="mario image">
         <img src="./assets/images/pipe.png" class="pipe" alt="image of a pipe">
+        
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Created by <a href="https://github.com/andy-guttridge" target="_blank" rel="noopener" aria-label="Link to the creator's GitHub profile - opens in new window">Jessica Valeria Hernandez</a></p>
+      </footer>
 
     <script src="./assets/js/script.js"></script>
 
