@@ -13,11 +13,10 @@
 
 <body>
     <div class="game-board">
-        
         <!-- Div to contain the area with timer, lives and score -->
         <div id="controls-info-container">
             <button id="start-button">Play!</button>
-            <button id="info-button">How to play</button>
+            <button class="info-button" id="open">How to play</button>
             <br>
             <div id = "play-info">
               <div class="text-color1 play-info-inner" aria-label="Number of seconds left for current turn" role="timer">
@@ -31,7 +30,10 @@
               </div>
             </div>
           </div>
-        <img src="./assets/images/ground.png" class="ground" alt="image of grass">
+        <div class="groundBackground">
+          <img src="./assets/images/ground.png" class="ground" alt="image of grass">
+        </div>
+        
         <img src="./assets/images/clouds.png" class="clouds" alt="image of a cloud">
         <img src="./assets/images/mario.gif" class="mario" alt="mario image">
         <img src="./assets/images/pipe.png" class="pipe" alt="image of a pipe">
@@ -40,10 +42,27 @@
 
     <!-- Footer -->
     <footer>
-        <p>Created by <a href="https://github.com/andy-guttridge" target="_blank" rel="noopener" aria-label="Link to the creator's GitHub profile - opens in new window">Jessica Valeria Hernandez</a></p>
-      </footer>
+      <img src="./assets/images/groundFooter.png" class="groundFooter" alt="image of grass">
+      <p>Created by <a href="https://github.com/andy-guttridge" target="_blank" rel="noopener" aria-label="Link to the creator's GitHub profile - opens in new window">Jessica Valeria Hernandez</a></p>
+    </footer>
+
+    <!-- Modal -->
+    <section class="modal" id="simpleModal">
+      <div class="modal_container">
+        <img src="./assets/images/modal.png" class="modal_img">
+        <h2 class="modal_title">How to play!</h2>
+        <p class="modal_paragraph">To make Mario jump, press the up narrow
+          on your keyboard. Enjoy.</p>
+        <a href="#" class="modal_close" id="close">Close</a>
+      </div>
+    </section>
+
+    
 
     <script src="./assets/js/script.js"></script>
+
+    
+
 
 
 </body>

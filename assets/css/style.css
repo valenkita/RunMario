@@ -33,11 +33,83 @@ button {
     color: white;
   }
   
-  #info-button {
+
+  /* How to playe button and modal for instructions */
+  .info-button {
     background-color: #2550d2;
     color: white;
   }
+
+  .info-button:hover{
+    background-color: pink;
+  }
+
+  .modal {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #111111bd ;
+    display: flex;
+    opacity:0;
+    pointer-events: none;
+  }
+
+  .modal.show  {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modal_container{
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display:grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+  }
+
+  .modal_title{
+    font-size: 2.5rem;
+  }
+
+  .modal_paragraph{
+    margin-bottom: 10px;
+  }
+
+  .modal_img{
+    width: 90%;
+    max-width: 200px;
+  }
+
+  .modal_close{
+    text-decoration: none;
+    color: #fff;
+    background-color: #87CEEB;
+    padding: 1em 3em;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color 3s;
+  }
+
+  .modal_close:hover{
+    color: #87CEEB;
+    background-color: #fff;
+  }
+
+
   
+  
+  /* play button */
+
   #play-info {
     text-align: right;
     font-family: 'DotGothic16', sans-serif;
@@ -55,7 +127,7 @@ button {
   }
 
 
-/* Footer */
+
 
 
 
@@ -69,15 +141,6 @@ button {
     animation: pipe-animation 1.5s infinite linear;
 }
 
-.ground {
-    position: absolute;
-    position: 0 0;
-    bottom:0;
-    width: 100%;
-    height: 100px;
-    animation: ground-animation 20s infinite linear;
-}
-
 /* Positioning and aligning mario */
 
 .mario {
@@ -87,14 +150,38 @@ button {
     bottom: 55px;
 }
 
+/* Jump configuration */
 .jump {
     animation: jump 500ms ease-out;
 }
 
+/* Clouds and ground  */
 .clouds {
     position: absolute;
     width: 550px;
     animation: clouds-animation 20s infinite linear;
+}
+
+.ground {
+    position: absolute;
+    left: 0;
+    bottom:0;
+    width: 100%;
+    height: 100px;
+    animation: ground-animation 20s infinite linear;
+}
+
+/* Footer */
+
+footer p {    
+    text-align: center;
+    position: relative;
+}
+
+.groundFooter {
+    width: 100%;
+    height: 80px;
+    position: absolute;
 }
 
 
@@ -124,15 +211,15 @@ the jump is finished */
     }
 
     40% {
-        bottom: 200px;
+        bottom: 250px;
     }
 
     50% {
-        bottom: 200px;
+        bottom: 250px;
     }
 
     60% {
-        bottom: 200px;
+        bottom: 250px;
     }
 
     100% {
@@ -140,6 +227,7 @@ the jump is finished */
     }
 }
 
+/* Clouds */ 
 @keyframes clouds-animation {
 
     from {
@@ -151,14 +239,15 @@ the jump is finished */
     }
 }
 
+/* Ground */
 @keyframes ground-animation {
 
     from {
-        right: -80px;
+        
     }
 
     to {
-        right: 100%;
+        ;
     }
 }
 
